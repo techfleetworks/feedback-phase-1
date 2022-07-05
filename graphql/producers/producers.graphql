@@ -1,0 +1,11 @@
+query Producers {
+  producers {
+    data {
+      id
+      attributes {
+        name
+        email
+      }
+    }
+  }
+}
