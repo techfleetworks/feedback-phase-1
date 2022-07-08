@@ -1,15 +1,15 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.scss";
-import { useProducersQuery } from "../generated";
-import { Navbar } from "../components";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.scss';
+import { useProducersQuery } from '../generated';
+import { Navbar } from '../components';
 
 const Home: NextPage = () => {
   const { data, error, loading } = useProducersQuery();
 
-  // if (loading) return <main className={styles.main}>Loading...</main>;
-  // if (error) return <main className={styles.main}>{error.message}</main>;
+  if (loading) return <main className={styles.main}>Loading...</main>;
+  if (error) return <main className={styles.main}>{error.message}</main>;
 
   // From here, { data } can be referenced
   return (
@@ -21,18 +21,16 @@ const Home: NextPage = () => {
       </Head>
 
       <Navbar />
-
       <main className="text-3xl font-bold underline">
-        Hello, {data?.producers?.data[0].attributes?.name}
+        <div>Hello, {data?.producers?.data[0].attributes?.name}</div>
       </main>
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
