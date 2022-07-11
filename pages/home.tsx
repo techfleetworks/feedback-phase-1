@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-type Props = {};
+type Props = unknown;
 
 const home = (props: Props) => {
   return <div>home</div>;
