@@ -1,2 +1,3 @@
 /** Allows for one-line imports. */
-export { default as Navbar } from "./Navbar";
+export { default as Navbar } from './Navbar';
+export { default as Footer } from './Footer';
