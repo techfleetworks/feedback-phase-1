@@ -1,9 +1,10 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import { useProducersQuery } from '../generated';
-import { Navbar } from '../components';
+import { Navbar, Footer } from '../components';
 
 const Home: NextPage = () => {
   const { data, error, loading } = useProducersQuery();
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Navbar />
-      <main className="text-3xl font-bold underline">
+      <main className="text-3xl font-bold underline text-center">
         <div>Hello, {data?.producers?.data[0].attributes?.name}</div>
       </main>
       <footer className={styles.footer}>
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
           </span>
         </a>
       </footer>
+      <Footer />
     </div>
   );
 };
