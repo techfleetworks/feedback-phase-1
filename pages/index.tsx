@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Navbar />
-      <main className="text-3xl font-bold underline">
+      <main className="text-3xl font-bold underline text-center">
         <div>Hello, {data?.producers?.data[0].attributes?.name}</div>
       </main>
       <footer className={styles.footer}>
