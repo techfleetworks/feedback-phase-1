@@ -1,39 +1,133 @@
+/* eslint-disable quotes */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import { NextPage } from "next";
+import React, { FC, useState } from "react";
 
 type Props = {};
 
-const login = (props: Props) => {
+const SignIn: FC = (props: Props) => {
   return (
-    <div className="grid grid-cols-8 grid-rows-4 h-screen w-100">
-      <div className="grid col-span-4 row-span-2 col-start-3 row-start-2 items-center bg-slate-200 p-5 rounded-lg h-3/4 drop-shadow-lg">
-        <form className="flex flex-col">
-          <div className="text-center text-2xl mb-2">Login</div>
-          <label className="mb-1 text-xl">Username</label>
-          <input
-            type="text"
-            placeholder="Enter Username"
-            className="border-2 mb-2 p-1"
-          ></input>
-          <label className="mb-1 text-xl">Password</label>
-          <input
-            type="text"
-            placeholder="Enter Password"
-            className="border-2 mb-4 p-1"
-          ></input>
-          <div className="flex flex-row">
-            <button
-              type="submit"
-              className="border-2 w-1/2 bg-cyan-300 p-1 rounded-md text-xl text-white"
-            >
-              Login
-            </button>
-            <button className="w-1/2 text-xl">Register</button>
-          </div>
-        </form>
-      </div>
+    <div>
+      <form action="submit" className="w-full flex flex-col items-start gap-2">
+        <h3 className="w-full">Email</h3>
+        <input
+          className="h-10 bg-gray-300 rounded w-full"
+          type="email"
+          required
+        />
+
+        <h3>Password</h3>
+        <input
+          className="h-10 bg-gray-300 rounded w-full"
+          type="password"
+          required
+        />
+
+        <button type="button" className="self-end underline">
+          Forgot password?
+        </button>
+
+        <button className="self-center h-10 bg-gray-300 w-full rounded-full mt-5">
+          Log In
+        </button>
+        <span className="self-center">or</span>
+        <button
+          type="button"
+          className="self-center h-10 bg-gray-300 w-full rounded-full"
+        >
+          Continue with Google
+        </button>
+      </form>
     </div>
   );
 };
 
-export default login;
+const SignUp: FC = (props: Props) => {
+  return (
+    <div>
+      <form action="submit" className="w-full flex flex-col items-start gap-2">
+        <h3 className="w-full">Full Name</h3>
+        <input
+          className="h-10 bg-gray-300 rounded w-full"
+          type="email"
+          required
+        />
+
+        <h3 className="w-full">Email</h3>
+        <input
+          className="h-10 bg-gray-300 rounded w-full"
+          type="email"
+          required
+        />
+
+        <h3>Password</h3>
+        <input
+          className="h-10 bg-gray-300 rounded w-full"
+          type="password"
+          required
+        />
+
+        <h3>Confirm Password</h3>
+        <input
+          className="h-10 bg-gray-300 rounded w-full"
+          type="password"
+          required
+        />
+
+        <button className="self-center h-10 bg-gray-300 w-full rounded-full mt-5">
+          Register
+        </button>
+        <span className="self-center">or</span>
+        <button
+          type="button"
+          className="self-center h-10 bg-gray-300 w-full rounded-full"
+        >
+          Continue with Google
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const Login: NextPage = (props: Props) => {
+  const [authChoice, setAuthChoice] = useState(true);
+  return (
+    <div className="w-screen h-screen flex">
+      <div className="w-2/4 h-full flex justify-center flex-col px-[10vw]">
+        <h1 className="w-full font-semibold text-4xl">
+          {authChoice ? "Welcome Back" : "Welcome"}
+        </h1>
+        <p className="w-full mb-5">
+          {authChoice
+            ? "Welcome back! Please enter your details."
+            : "Welcome! Please enter your details."}
+        </p>
+        {authChoice ? <SignIn /> : <SignUp />}
+        {authChoice ? (
+          <div className="self-center mt-2">
+            Need an account?{" "}
+            <span
+              className="underline cursor-pointer"
+              onClick={() => setAuthChoice((authChoice) => !authChoice)}
+            >
+              Sign Up
+            </span>
+          </div>
+        ) : (
+          <div className="self-center mt-2">
+            Already have an account?{" "}
+            <span
+              className="underline cursor-pointer"
+              onClick={() => setAuthChoice((authChoice) => !authChoice)}
+            >
+              Sign In
+            </span>
+          </div>
+        )}
+      </div>
+      <div className="w-2/4 h-full bg-gray-300"></div>
+    </div>
+  );
+};
+
+export default Login;
