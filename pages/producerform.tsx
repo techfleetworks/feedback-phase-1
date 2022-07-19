@@ -1,19 +1,19 @@
-import React from "react";
-
 type Props = {};
 
 const producerform = (props: Props) => {
   return (
     <div className="grid grid-cols-8 grid-rows-4 h-screen w-100">
-      <div className="grid col-span-4 col-start-3 justify-center">
+      <div className="grid col-span-4 col-start-3 justify-center mt-10">
         <form className="flex flex-col">
-          <h1 className="text-center mb-3">Producer Registration</h1>
+          <h1 className="text-center mb-3 text-2xl font-bold">
+            Producer Registration
+          </h1>
 
           <h1 className="mb-3 font-semibold">Personal Information</h1>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Name</label>
-            <input className="border-2" type="text" name="name"></input>
+            <label className="w-12">Name</label>
+            <input className="border-2 w-25" type="text" name="name"></input>
           </div>
 
           <div className="flex flex-col mb-3">
@@ -27,8 +27,8 @@ const producerform = (props: Props) => {
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Title</label>
-            <input className="border-2" type="text" name="title"></input>
+            <label className="w-12">Title</label>
+            <input className="w-25 border-2" type="text" name="title"></input>
           </div>
 
           <div className="flex flex-col mb-3">
@@ -43,25 +43,29 @@ const producerform = (props: Props) => {
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Email Address</label>
-            <input className="border-2" type="text" name="email"></input>
+            <label className="mr-2 w-28">Email Address</label>
+            <input className="border-2 w-25" type="text" name="email"></input>
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Phone Number</label>
-            <input className="border-2" type="text" name="phone"></input>
+            <label className="mr-2 w-28">Phone Number</label>
+            <input className="border-2 w-25" type="text" name="phone"></input>
           </div>
 
           <h1 className="mb-3 font-semibold">Business Details</h1>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Business Name</label>
-            <input className="border-2" type="text"></input>
+            <label className="mr-2 w-28">Business Name</label>
+            <input className="border-2 2-25" type="text"></input>
           </div>
 
           <div className="inline-flex mb-3">
             <label className="mr-2">Year Company Established</label>
-            <input className="border-2" type="text" name="established"></input>
+            <input
+              className="border-2 w-25"
+              type="text"
+              name="established"
+            ></input>
           </div>
 
           <div className="flex flex-col mb-3">
@@ -157,28 +161,40 @@ const producerform = (props: Props) => {
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Facebook</label>
-            <input className="border-2" type="text" name="facebook"></input>
+            <label className="mr-2 w-18">Facebook</label>
+            <input
+              className="border-2 w-25"
+              type="text"
+              name="facebook"
+            ></input>
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Instagram</label>
-            <input className="border-2" type="text" name="instagram"></input>
+            <label className="mr-2 w-18">Instagram</label>
+            <input
+              className="border-2 w-25"
+              type="text"
+              name="instagram"
+            ></input>
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Twitter</label>
-            <input className="border-2" type="text" name="twitter"></input>
+            <label className="mr-2 w-18">Twitter</label>
+            <input className="border-2 w-25" type="text" name="twitter"></input>
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">TikTok</label>
-            <input className="border-2" type="text" name="tiktok"></input>
+            <label className="mr-2 w-18">TikTok</label>
+            <input className="border-2 w-25" type="text" name="tiktok"></input>
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Other Social Media</label>
-            <input className="border-2" type="text" name="socialmedia"></input>
+            <label className="mr-2 w-18">Other Social Media</label>
+            <input
+              className="border-2 w-25"
+              type="text"
+              name="socialmedia"
+            ></input>
           </div>
 
           <h1 className="mb-3 font-semibold">Business Values</h1>
@@ -191,7 +207,7 @@ const producerform = (props: Props) => {
 
           <div className="inline-flex mb-3">
             <label className="mr-2">
-              Company Structure: i.e. Farmstead, B Corp, etc.{" "}
+              Company Structure: i.e. Farmstead, B Corp, etc.
             </label>
             <input
               className="border-2"
@@ -297,6 +313,118 @@ const producerform = (props: Props) => {
             </label>
             <textarea className="border-2" name="representation"></textarea>
           </div>
+
+          <h1 className="mb-3 font-semibold">Values Communication</h1>
+
+          <div className="inline-flex mb-3 display-flex flex-col">
+            <label className="mr-2">
+              Do you currently communicate the values (e.g. organic, fair labor)
+              of your business to general consumers? Yes or no. If yes, in what
+              way?
+            </label>
+            <textarea className="border-2" name="values1"></textarea>
+          </div>
+
+          <div className="inline-flex mb-3 display-flex flex-col">
+            <label className="mr-2">
+              Do you currently communicate the above values of your business to
+              buyers? Yes or no. If yes, in what way?
+            </label>
+            <textarea className="border-2" name="values2"></textarea>
+          </div>
+
+          <h1 className="mb-3 font-semibold">How Did You Find Us?</h1>
+          <div className="flex flex-col mb-3">
+            <label>
+              How did you hear about Feedback? Select all that apply
+            </label>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="ref"
+                value="friend"
+              />
+              <label>A friend told me</label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="ref"
+                value="socialmedia"
+              />
+              <label>A shared social media post</label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="ref"
+                value="instagrampost"
+              />
+              <label>Instagram post by Ruminate</label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="ref"
+                value="instagramad"
+              />
+              <label>Instagram ad</label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="ref"
+                value="facebookad"
+              />
+              <label>Facebook ad</label>
+            </div>
+
+            <div className="inline-flex">
+              <input className="mr-2" type="checkbox" name="ref" value="acs" />
+              <label>ACS</label>
+            </div>
+
+            <div className="inline-flex">
+              <input className="mr-2" type="checkbox" name="ref" value="gff" />
+              <label>Good Food Foundation</label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="ref"
+                value="other"
+              />
+              <label>Other</label>
+            </div>
+          </div>
+
+          <div className="inline-flex mb-3 display-flex flex-col">
+            <label className="mr-2">Please describe</label>
+            <textarea className="border-2" name="refdes"></textarea>
+          </div>
+
+          <div className="inline-flex mb-3 display-flex flex-col">
+            <label className="mr-2">
+              Why are you interested in giving Feedback?
+            </label>
+            <textarea className="border-2" name="interest"></textarea>
+          </div>
+
+          <button className="border-2 w-1/6" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>
