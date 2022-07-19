@@ -9,74 +9,26 @@ const producerform = (props: Props) => {
         <form className="flex flex-col">
           <h1 className="text-center mb-3">Producer Registration</h1>
 
-          <h1 className="mb-3">Personal Information</h1>
+          <h1 className="mb-3 font-semibold">Personal Information</h1>
 
           <div className="inline-flex mb-3">
             <label className="mr-2">Name</label>
-            <input className="border-2" type="text"></input>
+            <input className="border-2" type="text" name="name"></input>
           </div>
 
           <div className="flex flex-col mb-3">
             <label>Preferred Pronouns</label>
-            <select className="border-2" name="experience">
-              <option value="2">They/Them</option>
-              <option value="2-4">She/Her</option>
-              <option value="5-10">He/Him</option>
-              <option value="10">Prefer Not to Say</option>
+            <select className="border-2" name="pronouns">
+              <option value="they">They/Them</option>
+              <option value="she">She/Her</option>
+              <option value="he">He/Him</option>
+              <option value="noresponse">Prefer Not to Say</option>
             </select>
-          </div>
-
-          <div className="flex flex-col mb-3">
-            <label>Industry Sector</label>
-            <div className="inline-flex">
-              <input type="checkbox" name="industry" value="retail" />
-              <label>Retail</label>
-            </div>
-
-            <div className="inline-flex">
-              <input type="checkbox" name="industry" value="consulting" />
-              <label>Consulting</label>
-            </div>
-
-            <div className="inline-flex">
-              <input type="checkbox" name="industry" value="events" />
-              <label>Events</label>
-            </div>
-
-            <div className="inline-flex">
-              <input type="checkbox" name="industry" value="cheesemaking" />
-              <label>Cheesemaking</label>
-            </div>
-
-            <div>
-              <input type="checkbox" name="industry" value="distribution" />
-              <label>Distribution</label>
-            </div>
-
-            <div>
-              <input type="checkbox" name="industry" value="restaurant" />
-              <label>Restaurant</label>
-            </div>
-
-            <div>
-              <input type="checkbox" name="industry" value="media" />
-              <label>Media &#40;blogger, food critic&#41;</label>
-            </div>
-
-            {/* <div>
-              <input type="checkbox" name="industry" value="experience" />
-              <label>Years in industry</label>
-            </div> */}
           </div>
 
           <div className="inline-flex mb-3">
             <label className="mr-2">Title</label>
-            <input className="border-2" type="text"></input>
-          </div>
-
-          <div className="inline-flex mb-3">
-            <label className="mr-2">Current Employer</label>
-            <input className="border-2" type="text"></input>
+            <input className="border-2" type="text" name="title"></input>
           </div>
 
           <div className="flex flex-col mb-3">
@@ -85,92 +37,265 @@ const producerform = (props: Props) => {
               <option value="2">&#60;2</option>
               <option value="2-4">2-4</option>
               <option value="5-10">5-10</option>
-              <option value="10">10&#43;</option>
+              <option value="10-20">10-20</option>
+              <option value="20">20&#43;</option>
             </select>
           </div>
 
           <div className="inline-flex mb-3">
-            <label className="mr-2">Social Media</label>
+            <label className="mr-2">Email Address</label>
+            <input className="border-2" type="text" name="email"></input>
+          </div>
+
+          <div className="inline-flex mb-3">
+            <label className="mr-2">Phone Number</label>
+            <input className="border-2" type="text" name="phone"></input>
+          </div>
+
+          <h1 className="mb-3 font-semibold">Business Details</h1>
+
+          <div className="inline-flex mb-3">
+            <label className="mr-2">Business Name</label>
             <input className="border-2" type="text"></input>
           </div>
 
-          <div className="flex flex-col mb-3">
-            <label>Region</label>
-            <select className="border-2" name="experience">
-              <option value="2">Northeast</option>
-              <option value="2-4">Midwest</option>
-              <option value="5-10">South</option>
-              <option value="10">West</option>
-            </select>
+          <div className="inline-flex mb-3">
+            <label className="mr-2">Year Company Established</label>
+            <input className="border-2" type="text" name="established"></input>
           </div>
 
           <div className="flex flex-col mb-3">
-            <label>Types of cheese you have experience working with:</label>
+            <label>
+              What type(s) of products do you sell? Select all that apply
+            </label>
             <div className="inline-flex">
-              <input type="checkbox" name="cheese" value="Alpine-Style" />
-              <label>Alpine-Style</label>
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="products"
+                value="cheese"
+              />
+              <label>Cheese</label>
             </div>
 
             <div className="inline-flex">
-              <input type="checkbox" name="cheese" value="Blue" />
-              <label>Blue</label>
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="products"
+                value="salumi"
+              />
+              <label>Salumi (raw, cooked, and cured meats)</label>
             </div>
 
             <div className="inline-flex">
-              <input type="checkbox" name="cheese" value="Cheddar-Like" />
-              <label>Cheddar-Like</label>
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="products"
+                value="pickled"
+              />
+              <label>Pickled goods</label>
             </div>
 
             <div className="inline-flex">
-              <input type="checkbox" name="cheese" value="Créme" />
-              <label>Créme</label>
-            </div>
-
-            <div>
-              <input type="checkbox" name="cheese" value="Gouda-Like" />
-              <label>Gouda-Like</label>
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="products"
+                value="chocolate"
+              />
+              <label>Chocolate</label>
             </div>
 
             <div>
               <input
+                className="mr-2"
                 type="checkbox"
-                name="cheese"
-                value="Grana/Grating Cheese"
+                name="products"
+                value="fish"
               />
-              <label>Grana/Grating Cheese</label>
+              <label>Preserved fish and seafood</label>
             </div>
 
             <div>
               <input
+                className="mr-2"
                 type="checkbox"
-                name="cheese"
-                value="Pasta Filata (Mozzarella-Type)"
+                name="products"
+                value="pantry"
               />
-              <label>Pasta Filata (Mozzarella-Type)</label>
+              <label>Small-batch pantry items</label>
             </div>
 
             <div>
               <input
+                className="mr-2"
                 type="checkbox"
-                name="cheese"
-                value="Process (cheese spreads, American cheese)"
+                name="products"
+                value="other"
               />
-              <label>Process (cheese spreads, American cheese)</label>
+              <label>Other</label>
             </div>
+          </div>
 
-            <div>
+          <div className="inline-flex mb-3 display-flex flex-col">
+            <label className="mr-2">Product Description</label>
+            <textarea className="border-2" name="pdescription"></textarea>
+          </div>
+
+          <div className="inline-flex mb-3 display-flex flex-col">
+            <h1>Address</h1>
+            <label className="mr-2">Street Address</label>
+            <input className="border-2" name="street"></input>
+            <label className="mr-2">City</label>
+            <input className="border-2" name="city"></input>
+            <label className="mr-2">State</label>
+            <input className="border-2" name="state"></input>
+            <label className="mr-2">Zip</label>
+            <input className="border-2" name="zip"></input>
+          </div>
+
+          <div className="inline-flex mb-3">
+            <label className="mr-2">Facebook</label>
+            <input className="border-2" type="text" name="facebook"></input>
+          </div>
+
+          <div className="inline-flex mb-3">
+            <label className="mr-2">Instagram</label>
+            <input className="border-2" type="text" name="instagram"></input>
+          </div>
+
+          <div className="inline-flex mb-3">
+            <label className="mr-2">Twitter</label>
+            <input className="border-2" type="text" name="twitter"></input>
+          </div>
+
+          <div className="inline-flex mb-3">
+            <label className="mr-2">TikTok</label>
+            <input className="border-2" type="text" name="tiktok"></input>
+          </div>
+
+          <div className="inline-flex mb-3">
+            <label className="mr-2">Other Social Media</label>
+            <input className="border-2" type="text" name="socialmedia"></input>
+          </div>
+
+          <h1 className="mb-3 font-semibold">Business Values</h1>
+          <p className="mb-3">
+            Feedback exists to specifically support producers who contribute to
+            an ethical, equitable, and environmentally sustainable food system.
+            Our team will evaluate your certifications and written responses for
+            approval. We may reach out for an interview if needed.
+          </p>
+
+          <div className="inline-flex mb-3">
+            <label className="mr-2">
+              Company Structure: i.e. Farmstead, B Corp, etc.{" "}
+            </label>
+            <input
+              className="border-2"
+              type="text"
+              name="companystructure"
+            ></input>
+          </div>
+
+          <div className="flex flex-col mb-3">
+            <label>
+              Which of the following traits apply to the products you sell?
+              Select all that apply
+            </label>
+
+            <div className="inline-flex">
               <input
+                className="mr-2"
                 type="checkbox"
-                name="cheese"
-                value="Soft-Ripened (Brie-Like)"
+                name="traits"
+                value="organic"
               />
-              <label>Soft-Ripened (Brie-Like)</label>
+              <label>Organic (certified)</label>
             </div>
 
-            <div>
-              <input type="checkbox" name="cheese" value="Washed-Rind" />
-              <label>Washed-Rind</label>
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="traits"
+                value="awa"
+              />
+              <label>Animal Welfare Approved (AWA) (certified)</label>
             </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="traits"
+                value="humane"
+              />
+              <label>Certified Humane (certified)</label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="traits"
+                value="dbc"
+              />
+              <label>Demeter Biodynamic Certification</label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="traits"
+                value="grassfed"
+              />
+              <label>American Grassfed (certified)</label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="traits"
+                value="fairlabor"
+              />
+              <label>
+                Fair Labor Practices and Community Benefits (certified)
+              </label>
+            </div>
+
+            <div className="inline-flex">
+              <input
+                className="mr-2"
+                type="checkbox"
+                name="traits"
+                value="other"
+              />
+              <label>Other</label>
+            </div>
+          </div>
+
+          <div className="inline-flex mb-3 display-flex flex-col">
+            <label className="mr-2">
+              Are there any practices you have that are not certified but
+              contribute to an ethical, equitable, and/or environmentally
+              sustainable food system? Please share here.
+            </label>
+            <textarea className="border-2" name="practices"></textarea>
+          </div>
+
+          <div className="inline-flex mb-3 display-flex flex-col">
+            <label className="mr-2">
+              In the small, values-based food production economy, certain groups
+              are underrepresented, in terms of race, ethnicity, gender
+              identity, sexual orientation, physical ability, and/or immigration
+              status. Are you a member of an underrepresented group?
+            </label>
+            <textarea className="border-2" name="representation"></textarea>
           </div>
         </form>
       </div>
