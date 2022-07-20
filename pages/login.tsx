@@ -1,96 +1,114 @@
 /* eslint-disable quotes */
 /* eslint-disable no-unused-vars */
 import { NextPage } from "next";
+import Link from "next/link";
 import React, { FC, useState } from "react";
+
+const backendUrl = process.env.BACKEND_HOST;
+console.log(backendUrl);
 
 type Props = {};
 
-const SignIn: FC = (props: Props) => {
-  return (
-    <div>
-      <form action="submit" className="w-full flex flex-col items-start gap-2">
-        <h3 className="w-full">Email</h3>
-        <input
-          className="h-10 bg-gray-300 rounded w-full"
-          type="email"
-          required
-        />
-
-        <h3>Password</h3>
-        <input
-          className="h-10 bg-gray-300 rounded w-full"
-          type="password"
-          required
-        />
-
-        <button type="button" className="self-end underline">
-          Forgot password?
-        </button>
-
-        <button className="self-center h-10 bg-gray-300 w-full rounded-full mt-5">
-          Log In
-        </button>
-        <span className="self-center">or</span>
-        <button
-          type="button"
-          className="self-center h-10 bg-gray-300 w-full rounded-full"
-        >
-          Continue with Google
-        </button>
-      </form>
-    </div>
-  );
-};
-
-const SignUp: FC = (props: Props) => {
-  return (
-    <div>
-      <form action="submit" className="w-full flex flex-col items-start gap-2">
-        <h3 className="w-full">Full Name</h3>
-        <input
-          className="h-10 bg-gray-300 rounded w-full"
-          type="email"
-          required
-        />
-
-        <h3 className="w-full">Email</h3>
-        <input
-          className="h-10 bg-gray-300 rounded w-full"
-          type="email"
-          required
-        />
-
-        <h3>Password</h3>
-        <input
-          className="h-10 bg-gray-300 rounded w-full"
-          type="password"
-          required
-        />
-
-        <h3>Confirm Password</h3>
-        <input
-          className="h-10 bg-gray-300 rounded w-full"
-          type="password"
-          required
-        />
-
-        <button className="self-center h-10 bg-gray-300 w-full rounded-full mt-5">
-          Register
-        </button>
-        <span className="self-center">or</span>
-        <button
-          type="button"
-          className="self-center h-10 bg-gray-300 w-full rounded-full"
-        >
-          Continue with Google
-        </button>
-      </form>
-    </div>
-  );
-};
-
 const Login: NextPage = (props: Props) => {
   const [authChoice, setAuthChoice] = useState(true);
+
+  const SignIn: FC = (props: Props) => {
+    return (
+      <div>
+        <form
+          action="submit"
+          className="w-full flex flex-col items-start gap-2"
+        >
+          <h3 className="w-full">Email</h3>
+          <input
+            className="h-10 bg-gray-300 rounded w-full"
+            type="email"
+            required
+          />
+
+          <h3>Password</h3>
+          <input
+            className="h-10 bg-gray-300 rounded w-full"
+            type="password"
+            required
+          />
+
+          <button type="button" className="self-end underline">
+            Forgot password?
+          </button>
+
+          <button className="self-center h-10 bg-gray-300 w-full rounded-full mt-5">
+            Log In
+          </button>
+          <span className="self-center">or</span>
+          <Link href={`${backendUrl}api/connect/google`}>
+            <button
+              type="button"
+              className="self-center h-10 bg-gray-300 w-full rounded-full"
+            >
+              Continue with Google
+            </button>
+          </Link>
+        </form>
+      </div>
+    );
+  };
+
+  const SignUp: FC = (props: Props) => {
+    return (
+      <div>
+        <form
+          action="submit"
+          className="w-full flex flex-col items-start gap-2"
+        >
+          <h3 className="w-full">Full Name</h3>
+          <input
+            className="h-10 bg-gray-300 rounded w-full"
+            type="text"
+            name="username"
+            required
+          />
+
+          <h3 className="w-full">Email</h3>
+          <input
+            className="h-10 bg-gray-300 rounded w-full"
+            type="email"
+            name="email"
+            required
+          />
+
+          <h3>Password</h3>
+          <input
+            className="h-10 bg-gray-300 rounded w-full"
+            type="password"
+            name="password"
+            required
+          />
+
+          <h3>Confirm Password</h3>
+          <input
+            className="h-10 bg-gray-300 rounded w-full"
+            type="password"
+            required
+          />
+
+          <button className="self-center h-10 bg-gray-300 w-full rounded-full mt-5">
+            Register
+          </button>
+          <span className="self-center">or</span>
+          <Link href={`${backendUrl}api/connect/google`}>
+            <button
+              type="button"
+              className="self-center h-10 bg-gray-300 w-full rounded-full"
+            >
+              Continue with Google
+            </button>
+          </Link>
+        </form>
+      </div>
+    );
+  };
+
   return (
     <div className="w-screen h-screen flex">
       <div className="w-2/4 h-full flex justify-center flex-col px-[10vw]">
