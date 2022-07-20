@@ -7,7 +7,7 @@ import { TestAPIService } from "../services/TestAPI";
 const Testform = (props: Props) => {
   const [name, setName] = useState("");
 
-  const handleSendMessage = async (e) => {
+  const handleSendMessage = async (e: any) => {
     e.preventDefault();
 
     // if (!user) {
