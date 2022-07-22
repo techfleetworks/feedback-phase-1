@@ -1,0 +1,11 @@
+query TestEvaluationForms {
+  testEvaluationForms {
+    data {
+      id
+      attributes {
+        question1
+        question2
+      }
+    }
+  }
+}
