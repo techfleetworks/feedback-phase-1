@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 type Props = {};
 
-import { TestAPIService } from "../services/TestAPI";
+import { TestAPIService } from '../services/TestApi';
 
 const Testform = (props: Props) => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
   const handleSendMessage = async (e: any) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ const Testform = (props: Props) => {
       },
     });
 
-    await setName("");
+    await setName('');
   };
 
   return (

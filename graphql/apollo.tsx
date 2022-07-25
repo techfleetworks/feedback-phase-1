@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { PropsWithChildren } from 'react';
 

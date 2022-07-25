@@ -41,6 +41,20 @@ export type BooleanFilterInput = {
   startsWith?: InputMaybe<Scalars['Boolean']>;
 };
 
+export type ComponentSharedBooleanQuestion = {
+  __typename?: 'ComponentSharedBooleanQuestion';
+  answer?: Maybe<Scalars['Boolean']>;
+  id: Scalars['ID'];
+  text: Scalars['String'];
+};
+
+export type ComponentSharedOpenQuestion = {
+  __typename?: 'ComponentSharedOpenQuestion';
+  answer?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  question: Scalars['String'];
+};
+
 export type DateTimeFilterInput = {
   and?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   between?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
@@ -62,6 +76,127 @@ export type DateTimeFilterInput = {
   null?: InputMaybe<Scalars['Boolean']>;
   or?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   startsWith?: InputMaybe<Scalars['DateTime']>;
+};
+
+export type EvaluationFormCheese = {
+  __typename?: 'EvaluationFormCheese';
+  createdAt?: Maybe<Scalars['DateTime']>;
+  publishedAt?: Maybe<Scalars['DateTime']>;
+  question1: Scalars['Boolean'];
+  question1b?: Maybe<Scalars['String']>;
+  question2: Scalars['String'];
+  question3: Scalars['String'];
+  question4: Scalars['Boolean'];
+  question5: Scalars['Boolean'];
+  question6: Scalars['Boolean'];
+  question6b?: Maybe<Scalars['String']>;
+  question7: Scalars['String'];
+  question8: Scalars['String'];
+  question9: Scalars['String'];
+  question10: Scalars['String'];
+  question11: Scalars['Boolean'];
+  question11b?: Maybe<Scalars['String']>;
+  question12: UploadFileEntityResponse;
+  question13: Scalars['String'];
+  question14: Scalars['String'];
+  question15: Scalars['String'];
+  question16: Scalars['String'];
+  question17: Scalars['Boolean'];
+  question17b?: Maybe<Scalars['String']>;
+  question18?: Maybe<Scalars['String']>;
+  question19: Scalars['Boolean'];
+  question19b?: Maybe<Scalars['String']>;
+  question20: Scalars['Boolean'];
+  question21: Scalars['String'];
+  question22: Scalars['Boolean'];
+  question22b?: Maybe<Scalars['String']>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type EvaluationFormCheeseEntity = {
+  __typename?: 'EvaluationFormCheeseEntity';
+  attributes?: Maybe<EvaluationFormCheese>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type EvaluationFormCheeseEntityResponse = {
+  __typename?: 'EvaluationFormCheeseEntityResponse';
+  data?: Maybe<EvaluationFormCheeseEntity>;
+};
+
+export type EvaluationFormCheeseEntityResponseCollection = {
+  __typename?: 'EvaluationFormCheeseEntityResponseCollection';
+  data: Array<EvaluationFormCheeseEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type EvaluationFormCheeseFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<EvaluationFormCheeseFiltersInput>>>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  not?: InputMaybe<EvaluationFormCheeseFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<EvaluationFormCheeseFiltersInput>>>;
+  publishedAt?: InputMaybe<DateTimeFilterInput>;
+  question1?: InputMaybe<BooleanFilterInput>;
+  question1b?: InputMaybe<StringFilterInput>;
+  question2?: InputMaybe<StringFilterInput>;
+  question3?: InputMaybe<StringFilterInput>;
+  question4?: InputMaybe<BooleanFilterInput>;
+  question5?: InputMaybe<BooleanFilterInput>;
+  question6?: InputMaybe<BooleanFilterInput>;
+  question6b?: InputMaybe<StringFilterInput>;
+  question7?: InputMaybe<StringFilterInput>;
+  question8?: InputMaybe<StringFilterInput>;
+  question9?: InputMaybe<StringFilterInput>;
+  question10?: InputMaybe<StringFilterInput>;
+  question11?: InputMaybe<BooleanFilterInput>;
+  question11b?: InputMaybe<StringFilterInput>;
+  question13?: InputMaybe<StringFilterInput>;
+  question14?: InputMaybe<StringFilterInput>;
+  question15?: InputMaybe<StringFilterInput>;
+  question16?: InputMaybe<StringFilterInput>;
+  question17?: InputMaybe<BooleanFilterInput>;
+  question17b?: InputMaybe<StringFilterInput>;
+  question18?: InputMaybe<StringFilterInput>;
+  question19?: InputMaybe<BooleanFilterInput>;
+  question19b?: InputMaybe<StringFilterInput>;
+  question20?: InputMaybe<BooleanFilterInput>;
+  question21?: InputMaybe<StringFilterInput>;
+  question22?: InputMaybe<BooleanFilterInput>;
+  question22b?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type EvaluationFormCheeseInput = {
+  publishedAt?: InputMaybe<Scalars['DateTime']>;
+  question1?: InputMaybe<Scalars['Boolean']>;
+  question1b?: InputMaybe<Scalars['String']>;
+  question2?: InputMaybe<Scalars['String']>;
+  question3?: InputMaybe<Scalars['String']>;
+  question4?: InputMaybe<Scalars['Boolean']>;
+  question5?: InputMaybe<Scalars['Boolean']>;
+  question6?: InputMaybe<Scalars['Boolean']>;
+  question6b?: InputMaybe<Scalars['String']>;
+  question7?: InputMaybe<Scalars['String']>;
+  question8?: InputMaybe<Scalars['String']>;
+  question9?: InputMaybe<Scalars['String']>;
+  question10?: InputMaybe<Scalars['String']>;
+  question11?: InputMaybe<Scalars['Boolean']>;
+  question11b?: InputMaybe<Scalars['String']>;
+  question12?: InputMaybe<Scalars['ID']>;
+  question13?: InputMaybe<Scalars['String']>;
+  question14?: InputMaybe<Scalars['String']>;
+  question15?: InputMaybe<Scalars['String']>;
+  question16?: InputMaybe<Scalars['String']>;
+  question17?: InputMaybe<Scalars['Boolean']>;
+  question17b?: InputMaybe<Scalars['String']>;
+  question18?: InputMaybe<Scalars['String']>;
+  question19?: InputMaybe<Scalars['Boolean']>;
+  question19b?: InputMaybe<Scalars['String']>;
+  question20?: InputMaybe<Scalars['Boolean']>;
+  question21?: InputMaybe<Scalars['String']>;
+  question22?: InputMaybe<Scalars['Boolean']>;
+  question22b?: InputMaybe<Scalars['String']>;
 };
 
 export type FileInfoInput = {
@@ -93,7 +228,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']>;
 };
 
-export type GenericMorph = I18NLocale | Producer | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = ComponentSharedBooleanQuestion | ComponentSharedOpenQuestion | EvaluationFormCheese | I18NLocale | Producer | TestEvaluationForm | Testimonial | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -202,13 +337,19 @@ export type JsonFilterInput = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  createEvaluationFormCheese?: Maybe<EvaluationFormCheeseEntityResponse>;
   createProducer?: Maybe<ProducerEntityResponse>;
+  createTestEvaluationForm?: Maybe<TestEvaluationFormEntityResponse>;
+  createTestimonial?: Maybe<TestimonialEntityResponse>;
   createUploadFile?: Maybe<UploadFileEntityResponse>;
   /** Create a new role */
   createUsersPermissionsRole?: Maybe<UsersPermissionsCreateRolePayload>;
   /** Create a new user */
   createUsersPermissionsUser: UsersPermissionsUserEntityResponse;
+  deleteEvaluationFormCheese?: Maybe<EvaluationFormCheeseEntityResponse>;
   deleteProducer?: Maybe<ProducerEntityResponse>;
+  deleteTestEvaluationForm?: Maybe<TestEvaluationFormEntityResponse>;
+  deleteTestimonial?: Maybe<TestimonialEntityResponse>;
   deleteUploadFile?: Maybe<UploadFileEntityResponse>;
   /** Delete an existing role */
   deleteUsersPermissionsRole?: Maybe<UsersPermissionsDeleteRolePayload>;
@@ -225,8 +366,11 @@ export type Mutation = {
   removeFile?: Maybe<UploadFileEntityResponse>;
   /** Reset user password. Confirm with a code (resetToken from forgotPassword) */
   resetPassword?: Maybe<UsersPermissionsLoginPayload>;
+  updateEvaluationFormCheese?: Maybe<EvaluationFormCheeseEntityResponse>;
   updateFileInfo: UploadFileEntityResponse;
   updateProducer?: Maybe<ProducerEntityResponse>;
+  updateTestEvaluationForm?: Maybe<TestEvaluationFormEntityResponse>;
+  updateTestimonial?: Maybe<TestimonialEntityResponse>;
   updateUploadFile?: Maybe<UploadFileEntityResponse>;
   /** Update an existing role */
   updateUsersPermissionsRole?: Maybe<UsersPermissionsUpdateRolePayload>;
@@ -236,8 +380,23 @@ export type Mutation = {
 };
 
 
+export type MutationCreateEvaluationFormCheeseArgs = {
+  data: EvaluationFormCheeseInput;
+};
+
+
 export type MutationCreateProducerArgs = {
   data: ProducerInput;
+};
+
+
+export type MutationCreateTestEvaluationFormArgs = {
+  data: TestEvaluationFormInput;
+};
+
+
+export type MutationCreateTestimonialArgs = {
+  data: TestimonialInput;
 };
 
 
@@ -256,7 +415,22 @@ export type MutationCreateUsersPermissionsUserArgs = {
 };
 
 
+export type MutationDeleteEvaluationFormCheeseArgs = {
+  id: Scalars['ID'];
+};
+
+
 export type MutationDeleteProducerArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type MutationDeleteTestEvaluationFormArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type MutationDeleteTestimonialArgs = {
   id: Scalars['ID'];
 };
 
@@ -316,6 +490,12 @@ export type MutationResetPasswordArgs = {
 };
 
 
+export type MutationUpdateEvaluationFormCheeseArgs = {
+  data: EvaluationFormCheeseInput;
+  id: Scalars['ID'];
+};
+
+
 export type MutationUpdateFileInfoArgs = {
   id: Scalars['ID'];
   info?: InputMaybe<FileInfoInput>;
@@ -324,6 +504,18 @@ export type MutationUpdateFileInfoArgs = {
 
 export type MutationUpdateProducerArgs = {
   data: ProducerInput;
+  id: Scalars['ID'];
+};
+
+
+export type MutationUpdateTestEvaluationFormArgs = {
+  data: TestEvaluationFormInput;
+  id: Scalars['ID'];
+};
+
+
+export type MutationUpdateTestimonialArgs = {
+  data: TestimonialInput;
   id: Scalars['ID'];
 };
 
@@ -423,17 +615,36 @@ export enum PublicationState {
 
 export type Query = {
   __typename?: 'Query';
+  evaluationFormCheese?: Maybe<EvaluationFormCheeseEntityResponse>;
+  evaluationFormCheeses?: Maybe<EvaluationFormCheeseEntityResponseCollection>;
   i18NLocale?: Maybe<I18NLocaleEntityResponse>;
   i18NLocales?: Maybe<I18NLocaleEntityResponseCollection>;
   me?: Maybe<UsersPermissionsMe>;
   producer?: Maybe<ProducerEntityResponse>;
   producers?: Maybe<ProducerEntityResponseCollection>;
+  testEvaluationForm?: Maybe<TestEvaluationFormEntityResponse>;
+  testEvaluationForms?: Maybe<TestEvaluationFormEntityResponseCollection>;
+  testimonial?: Maybe<TestimonialEntityResponse>;
+  testimonials?: Maybe<TestimonialEntityResponseCollection>;
   uploadFile?: Maybe<UploadFileEntityResponse>;
   uploadFiles?: Maybe<UploadFileEntityResponseCollection>;
   usersPermissionsRole?: Maybe<UsersPermissionsRoleEntityResponse>;
   usersPermissionsRoles?: Maybe<UsersPermissionsRoleEntityResponseCollection>;
   usersPermissionsUser?: Maybe<UsersPermissionsUserEntityResponse>;
   usersPermissionsUsers?: Maybe<UsersPermissionsUserEntityResponseCollection>;
+};
+
+
+export type QueryEvaluationFormCheeseArgs = {
+  id?: InputMaybe<Scalars['ID']>;
+};
+
+
+export type QueryEvaluationFormCheesesArgs = {
+  filters?: InputMaybe<EvaluationFormCheeseFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  publicationState?: InputMaybe<PublicationState>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
 
@@ -456,6 +667,32 @@ export type QueryProducerArgs = {
 
 export type QueryProducersArgs = {
   filters?: InputMaybe<ProducerFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  publicationState?: InputMaybe<PublicationState>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+export type QueryTestEvaluationFormArgs = {
+  id?: InputMaybe<Scalars['ID']>;
+};
+
+
+export type QueryTestEvaluationFormsArgs = {
+  filters?: InputMaybe<TestEvaluationFormFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  publicationState?: InputMaybe<PublicationState>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+export type QueryTestimonialArgs = {
+  id?: InputMaybe<Scalars['ID']>;
+};
+
+
+export type QueryTestimonialsArgs = {
+  filters?: InputMaybe<TestimonialFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   publicationState?: InputMaybe<PublicationState>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
@@ -523,6 +760,105 @@ export type StringFilterInput = {
   null?: InputMaybe<Scalars['Boolean']>;
   or?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   startsWith?: InputMaybe<Scalars['String']>;
+};
+
+export type TestEvaluationForm = {
+  __typename?: 'TestEvaluationForm';
+  createdAt?: Maybe<Scalars['DateTime']>;
+  formID: Scalars['String'];
+  publishedAt?: Maybe<Scalars['DateTime']>;
+  question1: Scalars['String'];
+  question2: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type TestEvaluationFormEntity = {
+  __typename?: 'TestEvaluationFormEntity';
+  attributes?: Maybe<TestEvaluationForm>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type TestEvaluationFormEntityResponse = {
+  __typename?: 'TestEvaluationFormEntityResponse';
+  data?: Maybe<TestEvaluationFormEntity>;
+};
+
+export type TestEvaluationFormEntityResponseCollection = {
+  __typename?: 'TestEvaluationFormEntityResponseCollection';
+  data: Array<TestEvaluationFormEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type TestEvaluationFormFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<TestEvaluationFormFiltersInput>>>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  formID?: InputMaybe<StringFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  not?: InputMaybe<TestEvaluationFormFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<TestEvaluationFormFiltersInput>>>;
+  publishedAt?: InputMaybe<DateTimeFilterInput>;
+  question1?: InputMaybe<StringFilterInput>;
+  question2?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type TestEvaluationFormInput = {
+  formID?: InputMaybe<Scalars['String']>;
+  publishedAt?: InputMaybe<Scalars['DateTime']>;
+  question1?: InputMaybe<Scalars['String']>;
+  question2?: InputMaybe<Scalars['String']>;
+};
+
+export type Testimonial = {
+  __typename?: 'Testimonial';
+  altText: Scalars['String'];
+  avatar: UploadFileEntityResponse;
+  createdAt?: Maybe<Scalars['DateTime']>;
+  name: Scalars['String'];
+  publishedAt?: Maybe<Scalars['DateTime']>;
+  quote: Scalars['String'];
+  uID: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type TestimonialEntity = {
+  __typename?: 'TestimonialEntity';
+  attributes?: Maybe<Testimonial>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type TestimonialEntityResponse = {
+  __typename?: 'TestimonialEntityResponse';
+  data?: Maybe<TestimonialEntity>;
+};
+
+export type TestimonialEntityResponseCollection = {
+  __typename?: 'TestimonialEntityResponseCollection';
+  data: Array<TestimonialEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type TestimonialFiltersInput = {
+  altText?: InputMaybe<StringFilterInput>;
+  and?: InputMaybe<Array<InputMaybe<TestimonialFiltersInput>>>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  name?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<TestimonialFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<TestimonialFiltersInput>>>;
+  publishedAt?: InputMaybe<DateTimeFilterInput>;
+  quote?: InputMaybe<StringFilterInput>;
+  uID?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type TestimonialInput = {
+  altText?: InputMaybe<Scalars['String']>;
+  avatar?: InputMaybe<Scalars['ID']>;
+  name?: InputMaybe<Scalars['String']>;
+  publishedAt?: InputMaybe<Scalars['DateTime']>;
+  quote?: InputMaybe<Scalars['String']>;
+  uID?: InputMaybe<Scalars['String']>;
 };
 
 export type UploadFile = {
@@ -822,6 +1158,11 @@ export type ProducersQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type ProducersQuery = { __typename?: 'Query', producers?: { __typename?: 'ProducerEntityResponseCollection', data: Array<{ __typename?: 'ProducerEntity', id?: string | null, attributes?: { __typename?: 'Producer', name: string, email?: string | null } | null }> } | null };
 
+export type TestEvaluationFormsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TestEvaluationFormsQuery = { __typename?: 'Query', testEvaluationForms?: { __typename?: 'TestEvaluationFormEntityResponseCollection', data: Array<{ __typename?: 'TestEvaluationFormEntity', id?: string | null, attributes?: { __typename?: 'TestEvaluationForm', question1: string, question2: string } | null }> } | null };
+
 
 export const ProducersDocument = gql`
     query Producers {
@@ -863,3 +1204,43 @@ export function useProducersLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<
 export type ProducersQueryHookResult = ReturnType<typeof useProducersQuery>;
 export type ProducersLazyQueryHookResult = ReturnType<typeof useProducersLazyQuery>;
 export type ProducersQueryResult = Apollo.QueryResult<ProducersQuery, ProducersQueryVariables>;
+export const TestEvaluationFormsDocument = gql`
+    query TestEvaluationForms {
+  testEvaluationForms {
+    data {
+      id
+      attributes {
+        question1
+        question2
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useTestEvaluationFormsQuery__
+ *
+ * To run a query within a React component, call `useTestEvaluationFormsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useTestEvaluationFormsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useTestEvaluationFormsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useTestEvaluationFormsQuery(baseOptions?: Apollo.QueryHookOptions<TestEvaluationFormsQuery, TestEvaluationFormsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<TestEvaluationFormsQuery, TestEvaluationFormsQueryVariables>(TestEvaluationFormsDocument, options);
+      }
+export function useTestEvaluationFormsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<TestEvaluationFormsQuery, TestEvaluationFormsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<TestEvaluationFormsQuery, TestEvaluationFormsQueryVariables>(TestEvaluationFormsDocument, options);
+        }
+export type TestEvaluationFormsQueryHookResult = ReturnType<typeof useTestEvaluationFormsQuery>;
+export type TestEvaluationFormsLazyQueryHookResult = ReturnType<typeof useTestEvaluationFormsLazyQuery>;
+export type TestEvaluationFormsQueryResult = Apollo.QueryResult<TestEvaluationFormsQuery, TestEvaluationFormsQueryVariables>;
