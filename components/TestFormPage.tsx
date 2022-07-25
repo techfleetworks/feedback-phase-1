@@ -5,10 +5,12 @@ import { useRouter } from 'next/router';
 type Props = {};
 
 const TestFormPage = (props: Props) => {
+  // Sets state of questions
   const [question1, setQuestion1] = useState('');
   const [question2, setQuestion2] = useState('');
   const router = useRouter();
 
+  // Function to submit user input to Strapi
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const reqBody = {
@@ -18,12 +20,14 @@ const TestFormPage = (props: Props) => {
       },
     };
     const res = await axios.post(
+      // Endpoint for all forms
       'https://tranquil-journey-42623.herokuapp.com/api/test-evaluation-forms',
       reqBody
     );
     if (res.statusText === 'OK') {
-      console.log(res);
+      //Refreshes page (if on index),
       router.push('/');
+      alert('Form submitted! Heck ya!');
     }
   };
   return (
