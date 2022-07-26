@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { EvaluationFormCheese } from '../generated';
+// import { EvaluationFormCheese } from '../generated';
 
 // Input for forms to change
 // const [show, setShow] = useState(false);
@@ -196,11 +196,18 @@ const EvaluationFormCheese = (props: Props) => {
 
           <br />
 
-          <div>Initial Observations—Unboxing: In this section, you will review the initial presentation as well as the packaging and branding of the product (if relevant). Please make sure you hold onto the packaging and cheese label for this portion of the evaluation. You will be asked a set of questions before viewing the product. </div>
+          <div>
+            Initial Observations—Unboxing: In this section, you will review the
+            initial presentation as well as the packaging and branding of the
+            product (if relevant). Please make sure you hold onto the packaging
+            and cheese label for this portion of the evaluation. You will be
+            asked a set of questions before viewing the product.{' '}
+          </div>
 
           <div className="flex flex-col mb-3">
             <label>
-              What are your immediate thoughts about the packaging of the product?
+              What are your immediate thoughts about the packaging of the
+              product?
             </label>
             <input
               type="text"
@@ -211,9 +218,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
 
           <div className="flex flex-col mb-3">
-            <label>
-              How would you describe the label of the product?
-            </label>
+            <label>How would you describe the label of the product?</label>
             <input
               type="text"
               className="outline"
@@ -223,9 +228,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
 
           <div className="flex flex-col mb-3">
-            <label>
-              Does the label connect you to the product? 
-            </label>
+            <label>Does the label connect you to the product?</label>
             <input
               type=""
               className="outline"
@@ -235,9 +238,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
 
           <div className="flex flex-col mb-3">
-            <label>
-            Does the label connect you to the maker? 
-            </label>
+            <label>Does the label connect you to the maker?</label>
             <input
               type=""
               className="outline"
@@ -248,7 +249,7 @@ const EvaluationFormCheese = (props: Props) => {
 
           <div className="flex flex-col mb-3">
             <label>
-            Would you like to see any additional details on the label? 
+              Would you like to see any additional details on the label?
             </label>
             <input
               type=""
@@ -259,7 +260,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            What are these details that you would like to be included on the label? 
+              What are these details that you would like to be included on the
+              label?
             </label>
             <input
               type="text"
@@ -269,9 +271,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
 
           <div className="flex flex-col mb-3">
-            <label>
-            Do the colors on the packaging work for the product? 
-            </label>
+            <label>Do the colors on the packaging work for the product?</label>
             <input
               type="text"
               className="outline"
@@ -281,9 +281,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
 
           <div className="flex flex-col mb-3">
-            <label>
-            Does the font used work for the product? 
-            </label>
+            <label>Does the font used work for the product?</label>
             <input
               type="text"
               className="outline"
@@ -294,7 +292,9 @@ const EvaluationFormCheese = (props: Props) => {
 
           <div className="flex flex-col mb-3">
             <label>
-            Do you think the packaging would work well in your case from a utility standpoint? If not, what would you change that would make it more functional for you as a monger? 
+              Do you think the packaging would work well in your case from a
+              utility standpoint? If not, what would you change that would make
+              it more functional for you as a monger?
             </label>
             <input
               type="text"
@@ -306,7 +306,8 @@ const EvaluationFormCheese = (props: Props) => {
 
           <div className="flex flex-col mb-3">
             <label>
-              What challenges do you foresee with storage of the product in your place of work? 
+              What challenges do you foresee with storage of the product in your
+              place of work?
             </label>
             <input
               type="text"
@@ -318,7 +319,8 @@ const EvaluationFormCheese = (props: Props) => {
 
           <div className="flex flex-col mb-3">
             <label>
-              Did care instructions come with your product, either in shipment or on the packaging?  
+              Did care instructions come with your product, either in shipment
+              or on the packaging?
             </label>
             <input
               type=""
@@ -330,7 +332,8 @@ const EvaluationFormCheese = (props: Props) => {
 
           <div className="flex flex-col mb-3">
             <label>
-              Was the care information helpful? Is there anything that should be added or removed? 
+              Was the care information helpful? Is there anything that should be
+              added or removed?
             </label>
             <input
               type="text"
@@ -340,23 +343,26 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-              Before you begin evaluating the product itself, please upload a photograph of the opened product. This helps producers know if the product was altered in any way during shipment. 
+              Before you begin evaluating the product itself, please upload a
+              photograph of the opened product. This helps producers know if the
+              product was altered in any way during shipment.
             </label>
             {/* upload photo */}
-            <input
-              type=""
-              className="outline"
-              required
-            />
+            <input type="" className="outline" required />
           </div>
 
           <br />
 
-          <div>Product Details—Visual & Aroma: This section addresses the product’s physical appearance and smell. Be sure to set the cheese out for the recommended time that has been provided by the producer before completing this section. </div>
+          <div>
+            Product Details—Visual & Aroma: This section addresses the product’s
+            physical appearance and smell. Be sure to set the cheese out for the
+            recommended time that has been provided by the producer before
+            completing this section.{' '}
+          </div>
 
           <div className="flex flex-col mb-3">
             <label>
-              What are the first three words that come to mind for this product? 
+              What are the first three words that come to mind for this product?
             </label>
             <input
               type="text"
@@ -366,9 +372,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-              What are the distinguishing features of this product?
-            </label>
+            <label>What are the distinguishing features of this product?</label>
             <input
               type="text"
               className="outline"
@@ -377,9 +381,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-              How would you describe the smell of the product? 
-            </label>
+            <label>How would you describe the smell of the product?</label>
             <input
               type="text"
               className="outline"
@@ -389,7 +391,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-              Are the aromas of the product familiar? If so, please describe.  
+              Are the aromas of the product familiar? If so, please describe.
             </label>
             <input
               type="text"
@@ -400,7 +402,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-              Do you have any negative or unpleasant associations with the aromas? 
+              Do you have any negative or unpleasant associations with the
+              aromas?
             </label>
             <input
               type=""
@@ -410,9 +413,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-            What are they? Please describe.
-            </label>
+            <label>What are they? Please describe.</label>
             <input
               type="text"
               className="outline"
@@ -421,7 +422,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-              How would you describe the visuals of the product as a whole and once cut into? 
+              How would you describe the visuals of the product as a whole and
+              once cut into?
             </label>
             <input
               type="text"
@@ -431,9 +433,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-              Are there any defects or negative qualities?
-            </label>
+            <label>Are there any defects or negative qualities?</label>
             <input
               type=""
               className="outline"
@@ -442,9 +442,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-              What are they? Please describe. 
-            </label>
+            <label>What are they? Please describe.</label>
             <input
               type="text"
               className="outline"
@@ -452,9 +450,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-              Is the size/format suitable for the product? 
-            </label>
+            <label>Is the size/format suitable for the product?</label>
             <input
               type=""
               className="outline"
@@ -463,9 +459,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-              What makes the size suitable or not suitable? 
-            </label>
+            <label>What makes the size suitable or not suitable?</label>
             <input
               type="text"
               className="outline"
@@ -475,7 +469,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-              Would a change in size or format result in better sales in your market?  
+              Would a change in size or format result in better sales in your
+              market?
             </label>
             <input
               type=""
@@ -486,7 +481,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-              How might the product size or format be changed to be optimized for your market?  
+              How might the product size or format be changed to be optimized
+              for your market?
             </label>
             <input
               type=""
@@ -497,12 +493,16 @@ const EvaluationFormCheese = (props: Props) => {
 
           <br />
 
-          <div>Product Details—Taste/Flavor: Now that the cheese has been tempered and you have a good idea of its appearance and aroma,  we would like you to taste the cheese. </div>
-
+          <div>
+            Product Details—Taste/Flavor: Now that the cheese has been tempered
+            and you have a good idea of its appearance and aroma, we would like
+            you to taste the cheese.{' '}
+          </div>
 
           <div className="flex flex-col mb-3">
             <label>
-            What three words would you use to describe the flavor(s) of the product? 
+              What three words would you use to describe the flavor(s) of the
+              product?
             </label>
             <input
               type="text"
@@ -512,9 +512,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-            How does the paste taste? 
-            </label>
+            <label>How does the paste taste?</label>
             <input
               type="text"
               className="outline"
@@ -523,9 +521,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-            How does the rind taste? 
-            </label>
+            <label>How does the rind taste?</label>
             <input
               type="text"
               className="outline"
@@ -535,7 +531,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Is there consistency with flavor between the rind, creamline (if present), and paste? Please explain.  
+              Is there consistency with flavor between the rind, creamline (if
+              present), and paste? Please explain.
             </label>
             <input
               type="text"
@@ -546,8 +543,9 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Please share your thoughts on how this product specifically ranks amongst these flavor wheel attributes. 
-            {/* flavor wheel??? */}
+              Please share your thoughts on how this product specifically ranks
+              amongst these flavor wheel attributes.
+              {/* flavor wheel??? */}
             </label>
             <input
               type="text"
@@ -557,9 +555,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-            What is your physical response to the flavor?
-            </label>
+            <label>What is your physical response to the flavor?</label>
             <input
               type="text"
               className="outline"
@@ -569,7 +565,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Do you have any adverse responses to the product’s flavors? 
+              Do you have any adverse responses to the product’s flavors?
             </label>
             <input
               type="text"
@@ -580,7 +576,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Are there specific flavors contributing to this response?
+              Are there specific flavors contributing to this response?
             </label>
             <input
               type="text"
@@ -590,7 +586,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Are there any details such as salt level, physical features, etc. that influence how this product tastes to you?  
+              Are there any details such as salt level, physical features, etc.
+              that influence how this product tastes to you?
             </label>
             <input
               type="text"
@@ -600,9 +597,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
           <div className="flex flex-col mb-3">
-            <label>
-            How would you describe this product to a customer? 
-            </label>
+            <label>How would you describe this product to a customer?</label>
             <input
               type="text"
               className="outline"
@@ -612,7 +607,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            How would you describe this product to a knowledgeable person in your industry?
+              How would you describe this product to a knowledgeable person in
+              your industry?
             </label>
             <input
               type="text"
@@ -624,12 +620,16 @@ const EvaluationFormCheese = (props: Props) => {
 
           <br />
 
-          <div>Overall:  This section will detail your assessment of this product as it relates to other products you sell. We encourage you to reference the product sheet linked at the top of this evaluation during this section. Please respond in hypothetical or actual terms depending on if you already carry this product.</div>
+          <div>
+            Overall: This section will detail your assessment of this product as
+            it relates to other products you sell. We encourage you to reference
+            the product sheet linked at the top of this evaluation during this
+            section. Please respond in hypothetical or actual terms depending on
+            if you already carry this product.
+          </div>
 
           <div className="flex flex-col mb-3">
-            <label>
-            How do you see the product fitting into your case? 
-            </label>
+            <label>How do you see the product fitting into your case?</label>
             <input
               type="text"
               className="outline"
@@ -639,7 +639,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Would this product stand out in your case to a consumer? Why or why not? What would you change to make it stand out more?
+              Would this product stand out in your case to a consumer? Why or
+              why not? What would you change to make it stand out more?
             </label>
             <input
               type="text"
@@ -650,7 +651,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            How does the product relate to similar products you sell? How does it compare in terms of packaging/presentation and flavor? 
+              How does the product relate to similar products you sell? How does
+              it compare in terms of packaging/presentation and flavor?
             </label>
             <input
               type="text"
@@ -661,7 +663,9 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            If you currently sell this product: When offered this product alongside similar products, why might a customer choose, or not choose to purchase this product? 
+              If you currently sell this product: When offered this product
+              alongside similar products, why might a customer choose, or not
+              choose to purchase this product?
             </label>
             <input
               type="text"
@@ -672,7 +676,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Is there anything that you would specifically need to explain about this product to a customer?  
+              Is there anything that you would specifically need to explain
+              about this product to a customer?
             </label>
             <input
               type="text"
@@ -683,7 +688,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Is there a unit size of this product that would work well for your case? What is the ideal retail size for this product? 
+              Is there a unit size of this product that would work well for your
+              case? What is the ideal retail size for this product?
             </label>
             <input
               type="text"
@@ -694,7 +700,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            What would you, as a retailer, be willing to pay/what would be a fair price for this product in your area?   
+              What would you, as a retailer, be willing to pay/what would be a
+              fair price for this product in your area?
             </label>
             <input
               type="text"
@@ -705,7 +712,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            If you paid this price, how might you then price the product for your customer and how might this impact the sale of the product? 
+              If you paid this price, how might you then price the product for
+              your customer and how might this impact the sale of the product?
             </label>
             <input
               type="text"
@@ -716,7 +724,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Would this pricing fit into the majority of your customer base’s budget? Where would it sit?  
+              Would this pricing fit into the majority of your customer base’s
+              budget? Where would it sit?
             </label>
             <input
               type="text"
@@ -727,7 +736,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Do you have any suggestions on how to make this product more marketable?  
+              Do you have any suggestions on how to make this product more
+              marketable?
             </label>
             <input
               type="text"
@@ -738,7 +748,8 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-              Did you solicit opinions from others during this evaluation process? If so, who?  
+              Did you solicit opinions from others during this evaluation
+              process? If so, who?
             </label>
             <input
               type="text"
@@ -749,7 +760,10 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-            Reading the producer's stated goal with the product on the linked product sheet--did the producer succeed with their intentions of the product? What specific guidance would you provide for them to more effectively achieve this goal?  
+              Reading the producer&apos;s stated goal with the product on the
+              linked product sheet--did the producer succeed with their
+              intentions of the product? What specific guidance would you
+              provide for them to more effectively achieve this goal?
             </label>
             <input
               type="text"
@@ -760,7 +774,9 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
           <div className="flex flex-col mb-3">
             <label>
-              Are there any other comments or summary thoughts you’d like to share with the maker? If any pairing suggestions come to mind feel free to share in this area.  
+              Are there any other comments or summary thoughts you’d like to
+              share with the maker? If any pairing suggestions come to mind feel
+              free to share in this area.
             </label>
             <input
               type="text"
@@ -769,9 +785,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
-       
 
-        {/* old form stuff (copied form stuff?) below */}
+          {/* old form stuff (copied form stuff?) below */}
 
           <div className="inline-flex mb-3">
             <label className="mr-2 w-28">Email Address</label>
