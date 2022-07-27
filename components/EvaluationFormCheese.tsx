@@ -157,7 +157,7 @@ const EvaluationFormCheese = (props: Props) => {
       <div className="grid col-span-4 col-start-3 justify-center mt-10">
         <form className="flex flex-col" onSubmit={(e) => handleSubmit(e)}>
           <h1 className="text-center mb-3 text-2xl font-bold">
-            Cheese Evaluation Form
+            Producer Registration
           </h1>
 
           <div className="inline-flex mb-3">
@@ -165,8 +165,7 @@ const EvaluationFormCheese = (props: Props) => {
             <input
               type="text"
               className="outline"
-              // value="First Name, Last Name"
-              placeholder="First Name, Last Name"
+              value="First Name, Last Name"
               onChange={(e) => setName(e.target.value)}
               required
             />
@@ -788,7 +787,6 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
 
           {/* old form stuff (copied form stuff?) below */}
-          {/* 
           <div className="inline-flex mb-3">
             <label className="mr-2 w-28">Email Address</label>
             <input className="border-2 w-25" type="text" name="email"></input>
@@ -1167,7 +1165,7 @@ const EvaluationFormCheese = (props: Props) => {
               Why are you interested in giving Feedback?
             </label>
             <textarea className="border-2" name="interest"></textarea>
-          </div> */}
+          </div>
 
           <button className="border-2 w-1/6" type="submit">
             Submit

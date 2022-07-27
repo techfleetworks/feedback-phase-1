@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import { useProducersQuery } from '../generated';
 import { Navbar, Footer, TestFormPage } from '../components';
+import EvaluationFormCheese from '../components/EvaluationFormCheese';
 import Hero from '../components/Hero';
 const Home: NextPage = () => {
   const { data, error, loading } = useProducersQuery();
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
       </main>
       <Hero />
       <TestFormPage />
+      <EvaluationFormCheese />
       <Footer />
     </div>
   );

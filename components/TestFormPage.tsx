@@ -11,6 +11,7 @@ const TestFormPage = (props: Props) => {
   const [question3, setQuestion3] = useState("");
   const router = useRouter();
 
+  // Function to submit user input to Strapi
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const reqBody = {
