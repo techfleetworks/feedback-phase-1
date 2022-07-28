@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      display: 'Slabo, Georgia',
+      body: 'Raleway, Arial',
+    },
   },
   plugins: [],
 };

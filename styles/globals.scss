@@ -4,8 +4,17 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Slabo 27px', serif;
 }
 
 a {
@@ -17,9 +26,13 @@ a {
   box-sizing: border-box;
 }
 
-/* Header Start  */
-
-/* Header End  */
+/* Footer Start  */
+footer {
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* Footer End  */
 
 @tailwind base;
 @tailwind components;
