@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import axios from "axios";
+import { useState } from "react";
+import { useRouter } from "next/router";
 // import { EvaluationFormCheese } from '../generated';
 
 // Input for forms to change
@@ -24,59 +24,59 @@ type Props = {};
 
 const EvaluationFormCheese = (props: Props) => {
   // Sets state of questions
-  const [name, setName] = useState('');
-  const [question1, setQuestion1] = useState('');
-  const [question1b, setQuestion1b] = useState('');
-  const [question2, setQuestion2] = useState('');
-  const [question3, setQuestion3] = useState('');
-  const [question4, setQuestion4] = useState('');
-  const [question5, setQuestion5] = useState('');
-  const [question6, setQuestion6] = useState('');
-  const [question6b, setQuestion6b] = useState('');
-  const [question7, setQuestion7] = useState('');
-  const [question8, setQuestion8] = useState('');
-  const [question9, setQuestion9] = useState('');
-  const [question10, setQuestion10] = useState('');
-  const [question11, setQuestion11] = useState('');
-  const [question11b, setQuestion11b] = useState('');
-  const [question12, setQuestion12] = useState('');
-  const [question13, setQuestion13] = useState('');
-  const [question14, setQuestion14] = useState('');
-  const [question15, setQuestion15] = useState('');
-  const [question16, setQuestion16] = useState('');
-  const [question17, setQuestion17] = useState('');
-  const [question17b, setQuestion17b] = useState('');
-  const [question18, setQuestion18] = useState('');
-  const [question19, setQuestion19] = useState('');
-  const [question19b, setQuestion19b] = useState('');
-  const [question20, setQuestion20] = useState('');
-  const [question21, setQuestion21] = useState('');
-  const [question22, setQuestion22] = useState('');
-  const [question22b, setQuestion22b] = useState('');
-  const [question23, setQuestion23] = useState('');
-  const [question24, setQuestion24] = useState('');
-  const [question25, setQuestion25] = useState('');
-  const [question26, setQuestion26] = useState('');
-  const [question27, setQuestion27] = useState('');
-  const [question28, setQuestion28] = useState('');
-  const [question29, setQuestion29] = useState('');
-  const [question29b, setQuestion29b] = useState('');
-  const [question30, setQuestion30] = useState('');
-  const [question31, setQuestion31] = useState('');
-  const [question32, setQuestion32] = useState('');
-  const [question33, setQuestion33] = useState('');
-  const [question34, setQuestion34] = useState('');
-  const [question35, setQuestion35] = useState('');
-  const [question36, setQuestion36] = useState('');
-  const [question37, setQuestion37] = useState('');
-  const [question38, setQuestion38] = useState('');
-  const [question39, setQuestion39] = useState('');
-  const [question40, setQuestion40] = useState('');
-  const [question41, setQuestion41] = useState('');
-  const [question42, setQuestion42] = useState('');
-  const [question43, setQuestion43] = useState('');
-  const [question44, setQuestion44] = useState('');
-  const [question45, setQuestion45] = useState('');
+  const [name, setName] = useState("");
+  const [question1, setQuestion1] = useState("");
+  const [question1b, setQuestion1b] = useState("");
+  const [question2, setQuestion2] = useState("");
+  const [question3, setQuestion3] = useState("");
+  const [question4, setQuestion4] = useState("");
+  const [question5, setQuestion5] = useState("");
+  const [question6, setQuestion6] = useState("");
+  const [question6b, setQuestion6b] = useState("");
+  const [question7, setQuestion7] = useState("");
+  const [question8, setQuestion8] = useState("");
+  const [question9, setQuestion9] = useState("");
+  const [question10, setQuestion10] = useState("");
+  const [question11, setQuestion11] = useState("");
+  const [question11b, setQuestion11b] = useState("");
+  const [question12, setQuestion12] = useState("");
+  const [question13, setQuestion13] = useState("");
+  const [question14, setQuestion14] = useState("");
+  const [question15, setQuestion15] = useState("");
+  const [question16, setQuestion16] = useState("");
+  const [question17, setQuestion17] = useState("");
+  const [question17b, setQuestion17b] = useState("");
+  const [question18, setQuestion18] = useState("");
+  const [question19, setQuestion19] = useState("");
+  const [question19b, setQuestion19b] = useState("");
+  const [question20, setQuestion20] = useState("");
+  const [question21, setQuestion21] = useState("");
+  const [question22, setQuestion22] = useState("");
+  const [question22b, setQuestion22b] = useState("");
+  const [question23, setQuestion23] = useState("");
+  const [question24, setQuestion24] = useState("");
+  const [question25, setQuestion25] = useState("");
+  const [question26, setQuestion26] = useState("");
+  const [question27, setQuestion27] = useState("");
+  const [question28, setQuestion28] = useState("");
+  const [question29, setQuestion29] = useState("");
+  const [question29b, setQuestion29b] = useState("");
+  const [question30, setQuestion30] = useState("");
+  const [question31, setQuestion31] = useState("");
+  const [question32, setQuestion32] = useState("");
+  const [question33, setQuestion33] = useState("");
+  const [question34, setQuestion34] = useState("");
+  const [question35, setQuestion35] = useState("");
+  const [question36, setQuestion36] = useState("");
+  const [question37, setQuestion37] = useState("");
+  const [question38, setQuestion38] = useState("");
+  const [question39, setQuestion39] = useState("");
+  const [question40, setQuestion40] = useState("");
+  const [question41, setQuestion41] = useState("");
+  const [question42, setQuestion42] = useState("");
+  const [question43, setQuestion43] = useState("");
+  const [question44, setQuestion44] = useState("");
+  const [question45, setQuestion45] = useState("");
 
   const router = useRouter();
 
@@ -142,13 +142,13 @@ const EvaluationFormCheese = (props: Props) => {
     };
     const res = await axios.post(
       // Endpoint for all forms
-      'https://tranquil-journey-42623.herokuapp.com/api/test-evaluation-forms',
+      "https://tranquil-journey-42623.herokuapp.com/api/test-evaluation-forms",
       reqBody
     );
-    if (res.statusText === 'OK') {
+    if (res.statusText === "OK") {
       //Refreshes page (if on index),
-      router.push('/');
-      alert('Form submitted! Heck ya!');
+      router.push("/");
+      alert("Form submitted! Heck ya!");
     }
   };
 
@@ -160,50 +160,72 @@ const EvaluationFormCheese = (props: Props) => {
             Producer Registration
           </h1>
 
+          {/* QUESTION: NAME */}
           <div className="inline-flex mb-3">
             <label className="w-12">Name:</label>
             <input
               type="text"
+              name="name"
               className="outline"
-              value="First Name, Last Name"
               onChange={(e) => setName(e.target.value)}
               required
             />
           </div>
 
+          {/* QUESTION 1 */}
           <div className="flex flex-col mb-3">
             <label>
               Do you currently carry products from this producer at your place
               of work?
             </label>
-            {/* <div onChange={(e) => setQuestion1(e.target.value)}> */}
-            <input type="radio" value="Yes" name="gender" /> Yes
-            <input type="radio" value="No" name="gender" /> No
-            {/* </div> */}
+            <div>
+              <input
+                type="radio"
+                value="Yes"
+                onChange={(e) => setQuestion1(e.target.value)}
+                name="question1"
+              />{" "}
+              Yes
+              <input
+                type="radio"
+                value="No"
+                onChange={(e) => setQuestion1(e.target.value)}
+                name="question1"
+              />{" "}
+              No
+            </div>
           </div>
 
-          <div className="flex flex-col mb-3">
-            <label>
-              If so, which products? Be sure to note if you sell this specific
-              product.
-            </label>
-            <input
-              type="text"
-              className="outline"
-              onChange={(e) => setQuestion1b(e.target.value)}
-            />
-          </div>
+          {/* QUESTION 1b */}
+          {question1 === "Yes" ? (
+            <div className="flex flex-col mb-3">
+              <label>
+                If so, which products? Be sure to note if you sell this specific
+                product.
+              </label>
+              <input
+                type="text"
+                className="outline"
+                onChange={(e) => setQuestion1b(e.target.value)}
+                name="question1b"
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
 
           <br />
 
-          <div>
-            Initial Observations—Unboxing: In this section, you will review the
-            initial presentation as well as the packaging and branding of the
-            product (if relevant). Please make sure you hold onto the packaging
-            and cheese label for this portion of the evaluation. You will be
-            asked a set of questions before viewing the product.{' '}
-          </div>
+          <p>
+            <b>Initial Observations—Unboxing:</b> In this section, you will
+            review the initial presentation as well as the packaging and
+            branding of the product &#40;if relevant&#41;. Please make sure you
+            hold onto the packaging and cheese label for this portion of the
+            evaluation. You will be asked a set of questions before viewing the
+            product.
+          </p>
 
+          {/* QUESTION 2 */}
           <div className="flex flex-col mb-3">
             <label>
               What are your immediate thoughts about the packaging of the
@@ -217,6 +239,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
 
+          {/* QUESTION 3 */}
           <div className="flex flex-col mb-3">
             <label>How would you describe the label of the product?</label>
             <input
@@ -227,49 +250,95 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
 
+          {/* QUESTION 4 */}
           <div className="flex flex-col mb-3">
             <label>Does the label connect you to the product?</label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion4(e.target.value)}
-              required
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion4(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question4"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion4(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question4"
+              />
+              <label>No</label>
+            </div>
           </div>
 
+          {/* QUESTION 5 */}
           <div className="flex flex-col mb-3">
             <label>Does the label connect you to the maker?</label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion5(e.target.value)}
-              required
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion5(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question5"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion5(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question5"
+              />
+              <label>No</label>
+            </div>
           </div>
 
+          {/* QUESTION 6 */}
           <div className="flex flex-col mb-3">
             <label>
               Would you like to see any additional details on the label?
             </label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion6(e.target.value)}
-              required
-            />
-          </div>
-          <div className="flex flex-col mb-3">
-            <label>
-              What are these details that you would like to be included on the
-              label?
-            </label>
-            <input
-              type="text"
-              className="outline"
-              onChange={(e) => setQuestion6b(e.target.value)}
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion6(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question6"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion6(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question6"
+              />
+              <label>No</label>
+            </div>
           </div>
 
+          {/* QUESTION 6b */}
+          {question6 === "Yes" ? (
+            <div className="flex flex-col mb-3">
+              <label>
+                What are these details that you would like to be included on the
+                label?
+              </label>
+              <input
+                type="text"
+                className="outline"
+                onChange={(e) => setQuestion6b(e.target.value)}
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
+
+          {/* QUESTION 7 */}
           <div className="flex flex-col mb-3">
             <label>Do the colors on the packaging work for the product?</label>
             <input
@@ -280,6 +349,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
 
+          {/* QUESTION 8 */}
           <div className="flex flex-col mb-3">
             <label>Does the font used work for the product?</label>
             <input
@@ -290,6 +360,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
 
+          {/* QUESTION 9 */}
           <div className="flex flex-col mb-3">
             <label>
               Do you think the packaging would work well in your case from a
@@ -304,6 +375,7 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
 
+          {/* QUESTION 10 */}
           <div className="flex flex-col mb-3">
             <label>
               What challenges do you foresee with storage of the product in your
@@ -317,30 +389,50 @@ const EvaluationFormCheese = (props: Props) => {
             />
           </div>
 
+          {/* QUESTION 11 */}
           <div className="flex flex-col mb-3">
             <label>
               Did care instructions come with your product, either in shipment
               or on the packaging?
             </label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion11(e.target.value)}
-              required
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion11(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question11"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion11(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question11"
+              />
+              <label>No</label>
+            </div>
           </div>
 
-          <div className="flex flex-col mb-3">
-            <label>
-              Was the care information helpful? Is there anything that should be
-              added or removed?
-            </label>
-            <input
-              type="text"
-              className="outline"
-              onChange={(e) => setQuestion11b(e.target.value)}
-            />
-          </div>
+          {/* QUESTION 11b */}
+          {question11 === "Yes" ? (
+            <div className="flex flex-col mb-3">
+              <label>
+                Was the care information helpful? Is there anything that should
+                be added or removed?
+              </label>
+              <input
+                type="text"
+                className="outline"
+                onChange={(e) => setQuestion11b(e.target.value)}
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
+
+          {/* QUESTION 12 */}
           <div className="flex flex-col mb-3">
             <label>
               Before you begin evaluating the product itself, please upload a
@@ -353,13 +445,14 @@ const EvaluationFormCheese = (props: Props) => {
 
           <br />
 
-          <div>
-            Product Details—Visual & Aroma: This section addresses the product’s
-            physical appearance and smell. Be sure to set the cheese out for the
-            recommended time that has been provided by the producer before
-            completing this section.{' '}
-          </div>
+          <p>
+            <b>Product Details—Visual &#38; Aroma:</b> This section addresses
+            the product&apos;s physical appearance and smell. Be sure to set the
+            cheese out for the recommended time that has been provided by the
+            producer before completing this section.
+          </p>
 
+          {/* QUESTION 13 */}
           <div className="flex flex-col mb-3">
             <label>
               What are the first three words that come to mind for this product?
@@ -371,6 +464,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 14 */}
           <div className="flex flex-col mb-3">
             <label>What are the distinguishing features of this product?</label>
             <input
@@ -380,6 +475,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 15 */}
           <div className="flex flex-col mb-3">
             <label>How would you describe the smell of the product?</label>
             <input
@@ -389,6 +486,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 16 */}
           <div className="flex flex-col mb-3">
             <label>
               Are the aromas of the product familiar? If so, please describe.
@@ -400,26 +499,48 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 17 */}
           <div className="flex flex-col mb-3">
             <label>
               Do you have any negative or unpleasant associations with the
               aromas?
             </label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion17(e.target.value)}
-              required
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion17(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question17"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion17(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question17"
+              />
+              <label>No</label>
+            </div>
           </div>
-          <div className="flex flex-col mb-3">
-            <label>What are they? Please describe.</label>
-            <input
-              type="text"
-              className="outline"
-              onChange={(e) => setQuestion17b(e.target.value)}
-            />
-          </div>
+
+          {/* QUESTION 17B */}
+          {question17 === "Yes" ? (
+            <div className="flex flex-col mb-3">
+              <label>What are they? Please describe.</label>
+              <input
+                type="text"
+                className="outline"
+                onChange={(e) => setQuestion17b(e.target.value)}
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
+
+          {/* QUESTION 18 */}
           <div className="flex flex-col mb-3">
             <label>
               How would you describe the visuals of the product as a whole and
@@ -432,32 +553,68 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 19 */}
           <div className="flex flex-col mb-3">
             <label>Are there any defects or negative qualities?</label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion19(e.target.value)}
-              required
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion19(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question19"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion19(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question119"
+              />
+              <label>No</label>
+            </div>
           </div>
-          <div className="flex flex-col mb-3">
-            <label>What are they? Please describe.</label>
-            <input
-              type="text"
-              className="outline"
-              onChange={(e) => setQuestion19b(e.target.value)}
-            />
-          </div>
+
+          {/* QUESTION 19b */}
+          {question19 === "Yes" ? (
+            <div className="flex flex-col mb-3">
+              <label>What are they? Please describe.</label>
+              <input
+                type="text"
+                className="outline"
+                onChange={(e) => setQuestion19b(e.target.value)}
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
+
+          {/* QUESTION 20 */}
           <div className="flex flex-col mb-3">
             <label>Is the size/format suitable for the product?</label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion20(e.target.value)}
-              required
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion20(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question20"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion20(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question20"
+              />
+              <label>No</label>
+            </div>
           </div>
+
+          {/* QUESTION 21 */}
           <div className="flex flex-col mb-3">
             <label>What makes the size suitable or not suitable?</label>
             <input
@@ -467,38 +624,58 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 22 */}
           <div className="flex flex-col mb-3">
             <label>
               Would a change in size or format result in better sales in your
               market?
             </label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion22(e.target.value)}
-              required
-            />
-          </div>
-          <div className="flex flex-col mb-3">
-            <label>
-              How might the product size or format be changed to be optimized
-              for your market?
-            </label>
-            <input
-              type=""
-              className="outline"
-              onChange={(e) => setQuestion22b(e.target.value)}
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion22(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question22"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion22(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question22"
+              />
+              <label>No</label>
+            </div>
           </div>
 
+          {/* QUESTION 22b */}
+          {question22 === "Yes" ? (
+            <div className="flex flex-col mb-3">
+              <label>
+                How might the product size or format be changed to be optimized
+                for your market?
+              </label>
+              <input
+                type=""
+                className="outline"
+                onChange={(e) => setQuestion22b(e.target.value)}
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
           <br />
 
-          <div>
-            Product Details—Taste/Flavor: Now that the cheese has been tempered
-            and you have a good idea of its appearance and aroma, we would like
-            you to taste the cheese.{' '}
-          </div>
+          <p>
+            <b>Product Details—Taste/Flavor: </b>Now that the cheese has been
+            tempered and you have a good idea of its appearance and aroma, we
+            would like you to taste the cheese.
+          </p>
 
+          {/* QUESTION 23 */}
           <div className="flex flex-col mb-3">
             <label>
               What three words would you use to describe the flavor(s) of the
@@ -511,6 +688,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 24 */}
           <div className="flex flex-col mb-3">
             <label>How does the paste taste?</label>
             <input
@@ -520,6 +699,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 25 */}
           <div className="flex flex-col mb-3">
             <label>How does the rind taste?</label>
             <input
@@ -529,10 +710,12 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 26 */}
           <div className="flex flex-col mb-3">
             <label>
-              Is there consistency with flavor between the rind, creamline (if
-              present), and paste? Please explain.
+              Is there consistency with flavor between the rind, creamline
+              &#40;if present&#41;, and paste? Please explain.
             </label>
             <input
               type="text"
@@ -541,6 +724,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 27 */}
           <div className="flex flex-col mb-3">
             <label>
               Please share your thoughts on how this product specifically ranks
@@ -554,6 +739,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 28 */}
           <div className="flex flex-col mb-3">
             <label>What is your physical response to the flavor?</label>
             <input
@@ -563,27 +750,49 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 29 */}
           <div className="flex flex-col mb-3">
             <label>
-              Do you have any adverse responses to the product’s flavors?
+              Do you have any adverse responses to the product&apos;s flavors?
             </label>
-            <input
-              type="text"
-              className="outline"
-              onChange={(e) => setQuestion29(e.target.value)}
-              required
-            />
+            <div className="m-2">
+              <input
+                onChange={(e) => setQuestion29(e.target.value)}
+                className="mr-2"
+                type="radio"
+                value="Yes"
+                name="question29"
+              />
+              <label>Yes</label>
+              <input
+                onChange={(e) => setQuestion29(e.target.value)}
+                className="m-2"
+                type="radio"
+                value="No"
+                name="question29"
+              />
+              <label>No</label>
+            </div>
           </div>
-          <div className="flex flex-col mb-3">
-            <label>
-              Are there specific flavors contributing to this response?
-            </label>
-            <input
-              type="text"
-              className="outline"
-              onChange={(e) => setQuestion29b(e.target.value)}
-            />
-          </div>
+
+          {/* QUESTION 29b */}
+          {question29 === "Yes" ? (
+            <div className="flex flex-col mb-3">
+              <label>
+                Are there specific flavors contributing to this response?
+              </label>
+              <input
+                type="text"
+                className="outline"
+                onChange={(e) => setQuestion29b(e.target.value)}
+              />
+            </div>
+          ) : (
+            <div></div>
+          )}
+
+          {/* QUESTION 30 */}
           <div className="flex flex-col mb-3">
             <label>
               Are there any details such as salt level, physical features, etc.
@@ -596,6 +805,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 31 */}
           <div className="flex flex-col mb-3">
             <label>How would you describe this product to a customer?</label>
             <input
@@ -605,6 +816,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 32 */}
           <div className="flex flex-col mb-3">
             <label>
               How would you describe this product to a knowledgeable person in
@@ -620,14 +833,15 @@ const EvaluationFormCheese = (props: Props) => {
 
           <br />
 
-          <div>
-            Overall: This section will detail your assessment of this product as
-            it relates to other products you sell. We encourage you to reference
-            the product sheet linked at the top of this evaluation during this
-            section. Please respond in hypothetical or actual terms depending on
-            if you already carry this product.
-          </div>
+          <p>
+            <b>Overall:</b> This section will detail your assessment of this
+            product as it relates to other products you sell. We encourage you
+            to reference the product sheet linked at the top of this evaluation
+            during this section. Please respond in hypothetical or actual terms
+            depending on if you already carry this product.
+          </p>
 
+          {/* QUESTION 33 */}
           <div className="flex flex-col mb-3">
             <label>How do you see the product fitting into your case?</label>
             <input
@@ -637,6 +851,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 34 */}
           <div className="flex flex-col mb-3">
             <label>
               Would this product stand out in your case to a consumer? Why or
@@ -649,6 +865,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 35 */}
           <div className="flex flex-col mb-3">
             <label>
               How does the product relate to similar products you sell? How does
@@ -661,6 +879,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 36 */}
           <div className="flex flex-col mb-3">
             <label>
               If you currently sell this product: When offered this product
@@ -674,6 +894,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 37 */}
           <div className="flex flex-col mb-3">
             <label>
               Is there anything that you would specifically need to explain
@@ -686,6 +908,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 38 */}
           <div className="flex flex-col mb-3">
             <label>
               Is there a unit size of this product that would work well for your
@@ -698,6 +922,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 39 */}
           <div className="flex flex-col mb-3">
             <label>
               What would you, as a retailer, be willing to pay/what would be a
@@ -710,6 +936,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 40 */}
           <div className="flex flex-col mb-3">
             <label>
               If you paid this price, how might you then price the product for
@@ -722,6 +950,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 41 */}
           <div className="flex flex-col mb-3">
             <label>
               Would this pricing fit into the majority of your customer base’s
@@ -734,6 +964,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 42 */}
           <div className="flex flex-col mb-3">
             <label>
               Do you have any suggestions on how to make this product more
@@ -746,6 +978,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 43 */}
           <div className="flex flex-col mb-3">
             <label>
               Did you solicit opinions from others during this evaluation
@@ -758,6 +992,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 44 */}
           <div className="flex flex-col mb-3">
             <label>
               Reading the producer&apos;s stated goal with the product on the
@@ -772,6 +1008,8 @@ const EvaluationFormCheese = (props: Props) => {
               required
             />
           </div>
+
+          {/* QUESTION 45 */}
           <div className="flex flex-col mb-3">
             <label>
               Are there any other comments or summary thoughts you’d like to
@@ -787,8 +1025,7 @@ const EvaluationFormCheese = (props: Props) => {
           </div>
 
           {/* old form stuff (copied form stuff?) below */}
-
-          <div className="inline-flex mb-3">
+          {/* <div className="inline-flex mb-3">
             <label className="mr-2 w-28">Email Address</label>
             <input className="border-2 w-25" type="text" name="email"></input>
           </div>
@@ -1171,6 +1408,9 @@ const EvaluationFormCheese = (props: Props) => {
           <button className="border-2 w-1/6" type="submit">
             Submit
           </button>
+        </form>
+      </div>
+    </div> */}
         </form>
       </div>
     </div>
