@@ -7,7 +7,7 @@ type Props = {};
 const Footer = (props: Props) => {
   return (
     <>
-      <footer className="grid grid-cols-3 justify-items-center w-full">
+      <footer className="footer grid grid-cols-3 mt-8 justify-items-center">
         <div>
           <h5>Mini Sitemap</h5>
           <ul>
@@ -27,7 +27,7 @@ const Footer = (props: Props) => {
             </li>
           </ul>
         </div>
-        <div className=''>
+        <div className="">
           <h5>Contact Us</h5>
           <a href="#">Email</a>
         </div>
