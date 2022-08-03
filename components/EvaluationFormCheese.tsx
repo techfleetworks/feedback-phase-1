@@ -20,7 +20,6 @@ const EvaluationFormCheese = (props: Props) => {
   const [question10, setQuestion10] = useState('');
   const [question11, setQuestion11] = useState('');
   const [question11b, setQuestion11b] = useState('');
-  // const [question12, setQuestion12] = useState('');
   const [question13, setQuestion13] = useState('');
   const [question14, setQuestion14] = useState('');
   const [question15, setQuestion15] = useState('');
@@ -38,10 +37,10 @@ const EvaluationFormCheese = (props: Props) => {
   const [question24, setQuestion24] = useState('');
   const [question25, setQuestion25] = useState('');
   const [question26, setQuestion26] = useState('');
-  // const [question27, setQuestion27] = useState('');
+  const [question27, setQuestion27] = useState('');
   const [question28, setQuestion28] = useState('');
-  // const [question29, setQuestion29] = useState('');
-  // const [question29b, setQuestion29b] = useState('');
+  const [question29, setQuestion29] = useState('');
+  const [question29b, setQuestion29b] = useState('');
   const [question30, setQuestion30] = useState('');
   const [question31, setQuestion31] = useState('');
   const [question32, setQuestion32] = useState('');
@@ -99,10 +98,10 @@ const EvaluationFormCheese = (props: Props) => {
         question24: question24,
         question25: question25,
         question26: question26,
-        // question27: question27,
+        question27: question27,
         question28: question28,
-        // question29: question29,
-        // question29b: question29b,
+        question29: question29,
+        question29b: question29b,
         question30: question30,
         question31: question31,
         question32: question32,
@@ -123,13 +122,13 @@ const EvaluationFormCheese = (props: Props) => {
     };
     const res = await axios.post(
       // Endpoint for all forms
-      'https://tranquil-journey-42623.herokuapp.com/api/evaluation-form-cheeses',
+      'https://tranquil-journey-42623.herokuapp.com/api/evaluation-form-cheese-tests',
       reqBody
     );
     if (res.statusText === 'OK') {
       //Refreshes page (if on index),
       router.push('/');
-      alert('Form submitted! Heck ya!');
+      alert('Form submitted!');
     }
   };
 
@@ -292,6 +291,7 @@ const EvaluationFormCheese = (props: Props) => {
                 <label>No</label>
               </div>
             </div>
+
             {/* QUESTION 6b */}
             {question6 === 'Yes' ? (
               <div className="flex flex-col mb-3">
@@ -308,6 +308,7 @@ const EvaluationFormCheese = (props: Props) => {
             ) : (
               <div></div>
             )}
+
             {/* QUESTION 7 */}
             <div className="flex flex-col mb-3">
               <label>
@@ -674,19 +675,19 @@ const EvaluationFormCheese = (props: Props) => {
               />
             </div>
             {/* QUESTION 27 */}
-            {/* <div className="flex flex-col mb-3">
+            <div className="flex flex-col mb-3">
               <label>
                 Please share your thoughts on how this product specifically
-                ranks amongst these flavor wheel attributes. */}
-            {/* flavor wheel??? */}
-            {/* </label>
+                ranks amongst these flavor wheel attributes.
+                {/* flavor wheel??? */}
+              </label>
               <input
                 type="text"
                 className="outline"
                 onChange={(e) => setQuestion27(e.target.value)}
                 required
               />
-            </div> */}
+            </div>
             {/* QUESTION 28 */}
             <div className="flex flex-col mb-3">
               <label>What is your physical response to the flavor?</label>
@@ -698,7 +699,7 @@ const EvaluationFormCheese = (props: Props) => {
               />
             </div>
             {/* QUESTION 29 */}
-            {/* <div className="flex flex-col mb-3">
+            <div className="flex flex-col mb-3">
               <label>
                 Do you have any adverse responses to the product&apos;s flavors?
               </label>
@@ -720,9 +721,9 @@ const EvaluationFormCheese = (props: Props) => {
                 />
                 <label>No</label>
               </div>
-            </div> */}
+            </div>
             {/* QUESTION 29b */}
-            {/* {question29 === 'Yes' ? (
+            {question29 === 'Yes' ? (
               <div className="flex flex-col mb-3">
                 <label>
                   Are there specific flavors contributing to this response?
@@ -735,7 +736,7 @@ const EvaluationFormCheese = (props: Props) => {
               </div>
             ) : (
               <div></div>
-            )} */}
+            )}
             {/* QUESTION 30 */}
             <div className="flex flex-col mb-3">
               <label>
