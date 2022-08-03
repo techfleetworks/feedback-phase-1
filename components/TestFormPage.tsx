@@ -1,14 +1,40 @@
-import axios from "axios";
-import { useState } from "react";
-import { useRouter } from "next/router";
+import axios from 'axios';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { gql } from 'graphql-tag';
+import { stringify } from 'querystring';
 
 type Props = {};
 
 const TestFormPage = (props: Props) => {
+  // const CREATE_FORM = gql`
+  //   mutation createForm($input: CreateFormInput!) {
+  //     createForm( input: $input) {
+  //       data {
+  //         attributes {
+  //           question1
+  //           question2
+  //         }
+  //       }
+  //     }
+  //   }
+  // `;
+
+  // axios.post(
+  //   'https://tranquil-journey-42623.herokuapp.com/api/test-evaluation-forms',
+  //   {
+  //     query: print(CREATE_FORM),
+  //     variables: {
+  //       question1: this.form.question1,
+  //       question2: this.form.question2,
+  //     },
+  //   }
+  // );
+
   // Sets state of questions
-  const [question1, setQuestion1] = useState("");
-  const [question2, setQuestion2] = useState("");
-  const [question3, setQuestion3] = useState("");
+  const [question1, setQuestion1] = useState('');
+  const [question2, setQuestion2] = useState('');
+  const [question3, setQuestion3] = useState('');
   const router = useRouter();
 
   // Function to submit user input to Strapi
@@ -23,13 +49,13 @@ const TestFormPage = (props: Props) => {
     };
     const res = await axios.post(
       // Endpoint for all forms
-      "https://tranquil-journey-42623.herokuapp.com/api/test-evaluation-forms",
+      'https://tranquil-journey-42623.herokuapp.com/api/test-evaluation-forms',
       reqBody
     );
-    if (res.statusText === "OK") {
+    if (res.statusText === 'OK') {
       //Refreshes page (if on index),
-      router.push("/");
-      alert("Form submitted! Heck ya!");
+      router.push('/');
+      alert('Form submitted! Heck ya!');
     }
   };
   return (
@@ -82,7 +108,7 @@ const TestFormPage = (props: Props) => {
                 type="radio"
                 value="Yes"
                 name="gender"
-              />{" "}
+              />{' '}
               Yes
               <input
                 onChange={(e) => setQuestion3(e.target.value)}
@@ -90,7 +116,7 @@ const TestFormPage = (props: Props) => {
                 type="radio"
                 value="No"
                 name="gender"
-              />{" "}
+              />{' '}
               No
               {/* </div> */}
             </div>
