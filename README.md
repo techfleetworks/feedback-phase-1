@@ -14,7 +14,7 @@ To run the project in the development mode, follow the instructions below:
 1. Install [Yarn package manager](https://yarnpkg.com/) & request .env files from lead.
 
 2. Download or clone the repository in your computer:
-`$ git clone https://github.com/techfleetworks/feedback-be-phase-1.git`
+`$ git clone https://github.com/techfleetworks/feedback-phase-1.git`
 
 3. In the repository folder: 
 - Install project depndencies with
