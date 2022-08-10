@@ -24,11 +24,11 @@ const Home: NextPage = () => {
       </Head>
 
       <Navbar />
-      <div className="container">
+      <div>
+        <Hero />
         <div className="text-center">
           <h1>Hello, {data?.producers?.data[0].attributes?.name}</h1>
         </div>
-        <Hero />
         <EvaluationFormCheese />
       </div>
       <Footer />
