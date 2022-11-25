@@ -22,10 +22,10 @@ const Footer = (props: Props) => {
             <p>MORE ON FEEDBACK</p>
             <ul>
               <li>
-                <Link href="/">PRODUCER'S WHY</Link>
+                <Link href="/">PRODUCER&apos;S WHY</Link>
               </li>
               <li>
-                <Link href="/">EVALUATOR'S WHY</Link>
+                <Link href="/">EVALUATOR&apos;S WHY</Link>
               </li>
               <li>
                 <Link href="#">FAQs</Link>
@@ -66,7 +66,7 @@ const Footer = (props: Props) => {
         </div>
       </footer>
     </>
-  );
-};
+  )
+}
 
 export default Footer;
