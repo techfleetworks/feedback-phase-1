@@ -10,6 +10,7 @@ module.exports = {
     fontFamily: {
       display: 'Slabo, Georgia',
       body: 'Raleway, Arial',
+      anton: 'Anton, sans-serif',
     },
   },
   plugins: [],
